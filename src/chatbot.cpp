@@ -36,16 +36,62 @@ ChatBot::~ChatBot()
 
     // deallocate heap memory
     if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
-    {
+    {   
         delete _image;
         _image = NULL;
     }
 }
 
 //// STUDENT CODE
-////
+//// Task 2. The rule of five.
+//copy constuctor.
+ChatBot::ChatBot(const ChatBot &source) {
+    std::cout << "Chatbot copy content from " << &source << "to " << this << std::endl;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+}
 
-////
+//copy assignment.
+ChatBot &ChatBot::operator=(const ChatBot &source) {
+    std::cout << "Chatbot assign content from " << &source << "to " << this << std::endl;
+    if(&source == this) {
+        return *this;
+    }
+    delete _chatLogic;
+    delete _rootNode;
+    delete _image;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+    return *this;
+}
+
+//move constructor.
+ChatBot::ChatBot(ChatBot &&source) {
+    std::cout << "Chatbot move constructor" << std::endl;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._image = NULL;
+}
+
+//move assignment.
+ChatBot &ChatBot::operator=(ChatBot &&source) {
+    std::cout << "Chatbot move content from " << &source << "to " << this << std::endl;
+    if(&source == this) {
+        return *this;
+    }
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._image = NULL;
+    return *this;
+}
 //// EOF STUDENT CODE
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
