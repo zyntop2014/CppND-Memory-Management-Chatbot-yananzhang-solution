@@ -69,7 +69,7 @@ ChatBot &ChatBot::operator=(const ChatBot &source) {
 
 //move constructor.
 ChatBot::ChatBot(ChatBot &&source) {
-    std::cout << "Chatbot move constructor" << std::endl;
+    std::cout << "Chatbot Move Constructor" << std::endl;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
     _image = source._image;
