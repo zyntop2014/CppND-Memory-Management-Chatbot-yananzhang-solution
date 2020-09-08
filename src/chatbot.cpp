@@ -42,19 +42,19 @@ ChatBot::~ChatBot()
     }
 }
 
-//// STUDENT CODE
 //// Task 2. The rule of five.
 //copy constuctor.
 ChatBot::ChatBot(const ChatBot &source) {
-    std::cout << "Chatbot copy content from " << &source << "to " << this << std::endl;
+    std::cout << "Chatbot Copy Constructor" << std::endl;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
     _image = source._image;
 }
 
+//// Task 2. The rule of five.
 //copy assignment.
 ChatBot &ChatBot::operator=(const ChatBot &source) {
-    std::cout << "Chatbot assign content from " << &source << "to " << this << std::endl;
+    std::cout << "Chatbot Copy Assignment" << std::endl;
     if(&source == this) {
         return *this;
     }
@@ -67,6 +67,7 @@ ChatBot &ChatBot::operator=(const ChatBot &source) {
     return *this;
 }
 
+//// Task 2. The rule of five.
 //move constructor.
 ChatBot::ChatBot(ChatBot &&source) {
     std::cout << "Chatbot Move Constructor" << std::endl;
@@ -79,9 +80,10 @@ ChatBot::ChatBot(ChatBot &&source) {
     source._image = NULL;
 }
 
+//// Task 2. The rule of five.
 //move assignment.
 ChatBot &ChatBot::operator=(ChatBot &&source) {
-    std::cout << "Chatbot move content from " << &source << "to " << this << std::endl;
+    std::cout << "Chatbot Move Assignment" << std::endl;
     if(&source == this) {
         return *this;
     }
@@ -94,7 +96,6 @@ ChatBot &ChatBot::operator=(ChatBot &&source) {
     source._image = NULL;
     return *this;
 }
-//// EOF STUDENT CODE
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {
