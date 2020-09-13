@@ -6,11 +6,45 @@
 
 #IncludeRegexTransform: 
 
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatbot.cpp
+iostream
+-
+random
+-
+algorithm
+-
+ctime
+-
+chatlogic.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatlogic.h
+graphnode.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphnode.h
+graphedge.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphedge.h
+chatbot.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatbot.h
+
 /home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatbot.h
 wx/bitmap.h
 -
 string
 -
+
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatgui.cpp
+wx/filename.h
+-
+wx/colour.h
+-
+wx/image.h
+-
+string
+-
+chatbot.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatbot.h
+chatlogic.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatlogic.h
+chatgui.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatgui.h
 
 /home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatgui.h
 wx/wx.h
@@ -50,11 +84,23 @@ string
 chatgui.h
 /home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/chatgui.h
 
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphedge.cpp
+graphnode.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphnode.h
+graphedge.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphedge.h
+
 /home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphedge.h
 vector
 -
 string
 -
+
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphnode.cpp
+graphedge.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphedge.h
+graphnode.h
+/home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphnode.h
 
 /home/workspace/CppND-Memory-Management-Chatbot-yananzhang-solution/src/graphnode.h
 vector

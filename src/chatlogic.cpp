@@ -168,15 +168,11 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
         }
     }
 
-    // create a local chatbot instance
-    ChatBot chatBot = ChatBot("../images/chatbot.png");
-    // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
+    /// Task 5 : Moving the ChatBot
+    ChatBot chatBot("../images/chatbot.png");
     chatBot.SetChatLogicHandle(this);
-    // add chatbot to graph root node
     chatBot.SetRootNode(rootNode);
-    // assign the _chatBot with the local chatbot instance
     SetChatbotHandle(&chatBot) ;
-    // Move sementics for local chatBot
     rootNode->MoveChatbotHere(std::move(chatBot));
 }
 
